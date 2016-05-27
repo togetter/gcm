@@ -8,7 +8,7 @@ type Message struct {
 	RegistrationIDs       []string               `json:"registration_ids"`
 	CollapseKey           string                 `json:"collapse_key,omitempty"`
 	Data                  map[string]interface{} `json:"data,omitempty"`
-	Notification          *Notification           `json:"notification,omitempty"`
+	Notification          *Notification          `json:"notification,omitempty"`
 	DelayWhileIdle        bool                   `json:"delay_while_idle,omitempty"`
 	TimeToLive            int                    `json:"time_to_live,omitempty"`
 	RestrictedPackageName string                 `json:"restricted_package_name,omitempty"`
@@ -16,18 +16,18 @@ type Message struct {
 }
 
 type Notification struct {
-	Title			string	`json:"title"`
-	Body			string	`json:"body,omitempty"`
-	Icon			string	`json:"icon,omitempty"`
-	Sound			string	`json:"sound,omitempty"`
-	Badge			string	`json:"badge,omitempty"`
-	Tag				string	`json:"tag,omitempty"`
-	Color			string	`json:"color,omitempty"`
-	ClickAction		string	`json:"click_action,omitempty"`
-	BodyLocKey 		string	`json:"body_loc_key,omitempty"`
-	BodyLocArgs		string	`json:"body_loc_args,omitempty"`
-	TitleLocKey 	string	`json:"title_loc_key,omitempty"`
-	TitleLocArgs	string	`json:"title_loc_args,omitempty"`
+	Title        string `json:"title"`
+	Body         string `json:"body,omitempty"`
+	Icon         string `json:"icon,omitempty"`
+	Sound        string `json:"sound,omitempty"`
+	Badge        string `json:"badge,omitempty"`
+	Tag          string `json:"tag,omitempty"`
+	Color        string `json:"color,omitempty"`
+	ClickAction  string `json:"click_action,omitempty"`
+	BodyLocKey   string `json:"body_loc_key,omitempty"`
+	BodyLocArgs  string `json:"body_loc_args,omitempty"`
+	TitleLocKey  string `json:"title_loc_key,omitempty"`
+	TitleLocArgs string `json:"title_loc_args,omitempty"`
 }
 
 // NewMessage returns a new Message with the specified payload
