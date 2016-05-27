@@ -8,7 +8,7 @@ type Message struct {
 	RegistrationIDs       []string               `json:"registration_ids"`
 	CollapseKey           string                 `json:"collapse_key,omitempty"`
 	Data                  map[string]interface{} `json:"data,omitempty"`
-	Notification          Notification           `json:"notification,omitempty"`
+	Notification          *Notification           `json:"notification,omitempty"`
 	DelayWhileIdle        bool                   `json:"delay_while_idle,omitempty"`
 	TimeToLive            int                    `json:"time_to_live,omitempty"`
 	RestrictedPackageName string                 `json:"restricted_package_name,omitempty"`
@@ -36,6 +36,6 @@ func NewMessage(data map[string]interface{}, regIDs ...string) *Message {
 	return &Message{RegistrationIDs: regIDs, Data: data}
 }
 
-func NewMessageWithNotification(data map[string]interface{}, notification Notification, regIDs ...string) *Message {
+func NewMessageWithNotification(data map[string]interface{}, notification *Notification, regIDs ...string) *Message {
 	return &Message{RegistrationIDs: regIDs, Data: data, Notification: notification}
 }
